@@ -1,0 +1,156 @@
+//@import url("../kontrapunkt/stylesheet.css");
+
+@import "preboot.less";
+@import "colors.less";
+@import "buttons.less";
+
+body{
+	//font-family: "Kontrapunkt";
+	//background-image: url('../img/tiny_grid.png');
+	//background-image: url('../img/square_bg.png');
+	//background-image: url('../img/subtle_dots.png');
+	background-image: url('../img/noise.png');
+}
+
+@media (max-width: 767px) {
+
+	.front-feature{
+		iframe{
+			height: 300px;
+		}
+		min-height: 300px;
+	}
+
+}
+
+.rounded-box{
+	.border-radius(6px);
+	background-color: @bstgrey;
+	background-image: url('../img/square_bg.png');
+	.box-shadow(2px 3px 3px rgba(0,0,0,.25));
+	overflow: hidden;
+
+	.progresspart{
+		padding: 15px 30px;
+
+		border-bottom: 1px solid darken(@bstgrey,10%);
+	}
+
+	.middlepart{
+		border-top: 1px solid @bstwhite;
+		border-bottom: 1px solid darken(@bstgrey,10%);
+		padding: 15px 30px;
+		display: none;
+	}
+
+	.actionpart{
+		border-top: 1px solid @bstwhite;
+		padding: 10px;
+		text-align: center;
+		background-image: url('../img/checkered_pattern.png');
+		.btn{
+			width: 80%;
+			padding: 10px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+}
+
+ul.horizontal{
+	display: block;
+	margin: 0;
+	list-style: none;
+	li{
+		float: left;
+	}
+}
+
+// Success (green)
+.progress-trust .bar, .progress .bar-trust {
+  #gradient > .vertical(@bstblue, lighten(@bstblue,5%));
+}
+.progress-trust.progress-striped .bar, .progress-striped .bar-trust {
+  #gradient > .striped(@bstblue);
+}
+
+.navigation{
+	font-family: "Kontrapunkt";
+	position: relative;
+	z-index: 10;
+	background-color: @bstblue;
+
+	#gradient > .vertical-three-colors(lighten(@bstblue,10%),@bstblue,.70,@bstblue);
+	color: @bstwhite;
+	//border-bottom: 2px solid @bstyellow;
+	padding: 10px 0;
+	.box-shadow(0 4px 10px rgba(0,0,0,.25));
+	margin-bottom: 20px;
+
+
+	h2{
+		line-height: 60px;
+		float: left;
+		margin: 0;
+		font-size: 28px;
+	}
+
+	ul{
+		float: right;
+		li{
+			line-height: 60px;
+			margin-right: 20px;
+			font-size: 18px;
+			font-weight: bold;
+			a{
+				color: @bstwhite;
+				text-shadow: 1px 2px #000000;
+
+				&:hover{
+					color: @bstyellow;
+					text-decoration: none;
+					text-shadow: -1px -1px #000000;
+				}
+			}
+
+			&.buy{
+				a{
+					color: @bstyellow;
+				}
+			}
+		}
+	}
+
+	img{
+		float: left;
+		margin-right: 15px;
+		height: 60px;
+	}
+}
+
+.front-feature{
+	//background-color: @bstwhite;
+	//background-image:url('../img/bglow.jpg');
+	background-position:50% 70%;	
+	background-size:cover;
+	padding: 30px 0 0px 0;
+}
+
+.main{
+	padding: 10px 0;
+	margin: 30px 0;
+	//background-color: @bstwhite;
+	
+	color: @bstblack;
+}
+
+.footer{
+	border-top: 2px solid @bstyellow;
+	background-color: @bstblue;
+	//#gradient > .vertical(darken(@bstblue,2%),@bstblue);
+	//#gradient > .vertical(darken(@bstgrey,90%),darken(@bstgrey,75%));
+	background-image: url('../img/noise.png');
+	color: @bstwhite;
+	padding: 10px 0;
+	min-height: 150px;
+}
